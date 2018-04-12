@@ -24,8 +24,20 @@ public class Tree<T> {
 			if (node.getInfo() == newNode.getFather().getInfo()) {
 				node.addListNode(newNode);
 			}else{
-				addNode(newNode, node);
 			}
 		}
 	}
+	public void print(Node<T> actual) {
+		System.out.println(actual.toString());
+		if (!actual.getNodeList().isEmpty()) {
+			for (Node<T> node : actual.getNodeList()) {
+				print(node);
+			}
+		}
+	}
+
+	public Node<T> getRoot() {
+		return root;
+	}
+	
 } 

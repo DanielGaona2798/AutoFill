@@ -14,4 +14,7 @@ public class LetterMannager {
 	public void addNode(Node<Letter> newNode) {
 		letterList.addNode(newNode);
 	}
+	public void print() {
+		letterList.print(letterList.getRoot());
+	}
 }

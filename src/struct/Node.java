@@ -34,6 +34,15 @@ public class Node<T> {
 	public void addListNode(Node<T> newNode) {
 		nodeList.add(newNode);
 	}
+
+
+	@Override
+	public String toString() {
+		return "Node [info=" + info + ", father=" + father + ", nodeList=" + nodeList + "]";
+	}
+
+
+
 	
 
 }

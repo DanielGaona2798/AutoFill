@@ -10,6 +10,9 @@ public class Controller {
 	
 	public Controller() {
 		letterMannager = new LetterMannager();
-		letterMannager.addNode(new Node<Letter>(new Letter("a"), null));
+		Node<Letter> father = new Node<Letter>(new Letter("a"), null);
+		letterMannager.addNode(father);
+		letterMannager.addNode(new Node<Letter>(new Letter("b"), father));
+		letterMannager.print();
 	}
 }

@@ -24,7 +24,7 @@ public class Tree<T> {
 			if (node.getInfo() == newNode.getFather().getInfo()) {
 				node.addListNode(newNode);
 			}else{
-				System.out.println("Padre no existe");
+				addNode(newNode, node);
 			}
 		}
 	}

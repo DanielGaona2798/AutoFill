@@ -7,9 +7,11 @@ public class Node <T>{
 	private T information;
 	private MyList<Node<T>> listNodes;
 	
-	public Node(T information) {
-		this.information = information;
+	public Node(T info) {
+		this.information = info;
 	}
+	
+	
 	public T getInformation() {
 		return information;
 	}

@@ -1,6 +1,7 @@
 package views;
 
 import java.awt.GridLayout;
+import java.util.HashSet;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -33,8 +34,15 @@ public class MainWindow extends JFrame{
 		btnAccept.addActionListener(controller);
 		btnAccept.setActionCommand(Actions.ADD_String.toString());
 		add(btnAccept);
-		
-		
 	}
 	
+	public String getString(){
+		return txtText.getText();
+	}
+	
+	public void fullBox(HashSet<String> stringBox) {
+		for (String string : stringBox) {
+			boxString.addItem(string);
+		}
+	}
 }

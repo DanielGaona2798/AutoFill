@@ -27,15 +27,15 @@ public class MyList <T>{
 		}
 	}
 
-	public void add(Node<T> node){
+	public void add(T node){
 		if (head != null) {
 			Node<T> actual = head;
 			while (actual.getNext() != null) {
 				actual = actual.getNext();
 			}
-			actual.setNext(node);
+			actual.setNext(new Node<T>(node));
 		}else{
-			head = node;
+			head = new Node<T>(node);
 		}
 	}
 
@@ -155,39 +155,5 @@ public class MyList <T>{
 	public void priorityEnqueue(Node<T> node) {
 
 	}
-	//	public static void main(String[] args) {
-	//		MyList<Card> deck = new MyList<>(new ComparatorCard());
-	//		for (int i = 0; i < 10; i++) {			
-	//			deck.add(new Node<Card>(new Card()));
-	//		}
-	//		
-	//		CardIterator card = new CardIterator(deck.getHead());
-	//		while (card.hasNext()) {
-	//			Card actual = card.next();
-	//			System.out.println(actual);
-	//		}
-	//		System.out.println("--------------");
-	//		System.out.println(deck.getMaxElement());
-	//	}
 
-	//	public static void main(String[] args) {
-	//		MyList<Integer> list = new MyList<>(new Comparator<Integer>() {
-	//			@Override
-	//			public int compare(Integer o1, Integer o2) {
-	//				return o1 - o2;
-	//			}
-	//		});
-	//		for (int i = 0; i < 10; i++) {
-	//			list.enqueue(new Node<Integer>(i));
-	//		}
-	//
-	//		list.print();
-	//		System.out.println("-------------------------");
-	//		System.out.println(list.dequeue().getInformation() + "nodo en cola..");
-	//		System.out.println(list.dequeue().getInformation() + "nodo en cola..");
-	//		System.out.println(list.dequeue().getInformation() + "nodo en cola..");
-	//		System.out.println(list.dequeue().getInformation() + "nodo en cola..");
-	//		System.out.println("-------------------------");
-	//		list.print();
-	//	}
 }

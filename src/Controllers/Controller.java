@@ -25,9 +25,15 @@ public class Controller implements ActionListener{
 	public void actionPerformed(ActionEvent arg0) {
 		switch (Actions.valueOf(arg0.getActionCommand())) {
 		case ADD_String:
+			fullTree();
 			break;
 		default:
 			break;
 		}
+	}
+
+	private void fullTree() {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -1,7 +1,6 @@
 package models.entities;
 
 import struct.NarioTree;
-import struct.Node;
 
 public class LetterMannager {
 

@@ -1,6 +1,4 @@
 package struct;
-
-
 public class NarioTree<T> {
 
 	private Node<T> root;

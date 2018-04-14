@@ -1,48 +1,46 @@
 package struct;
 
-import java.util.ArrayList;
+public class Node <T>{
 
-
-public class Node<T> {
-
-	private T info;
-	private Node<T> father;
-	private ArrayList<Node<T>> nodeList;
+	private Node<T> next;
+	private Node<T> left;
+	private T information;
+	private MyList<Node<T>> listNodes;
 	
-	
-	public Node(T info,Node<T> father) {
-		this.info = info;
-		this.father = father;
-		nodeList = new ArrayList<>();
+	public Node(T information) {
+		this.information = information;
+	}
+	public T getInformation() {
+		return information;
 	}
 
-
-	public T getInfo() {
-		return info;
-	}
-
-
-	public Node<T> getFather() {
-		return father;
-	}
-
-
-	public ArrayList<Node<T>> getNodeList() {
-		return nodeList;
+	public Node<T> getNext() {
+		return next;
 	}
 	
-	public void addListNode(Node<T> newNode) {
-		nodeList.add(newNode);
+	public void setNext(Node<T> next) {
+		this.next = next;
 	}
-
-
+	
+	public void setAnt(Node<T> ant) {
+		this.left = ant;
+	}
+	
+	public Node<T> getAnt() {
+		return left;
+	}
+	
 	@Override
 	public String toString() {
-		return "Node [info=" + info + ", father=" + father + ", nodeList=" + nodeList + "]";
+		return information.toString();
 	}
 
+	public MyList<Node<T>> getListNodes() {
+		return listNodes;
+	}
 
-
+	public void setListNodes(MyList<Node<T>> listNodes) {
+		this.listNodes = listNodes;
+	}
 	
-
 }

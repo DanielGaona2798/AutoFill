@@ -1,20 +1,17 @@
 package models.entities;
 
+import struct.NarioTree;
 import struct.Node;
-import struct.Tree;
 
 public class LetterMannager {
 
-	private Tree<Letter> letterList;
+	private NarioTree<Letter> letterList;
 	
 	public LetterMannager() {
-		letterList = new Tree<>();
+		letterList = new NarioTree<>();
 	}
 	
-	public void addNode(Node<Letter> newNode) {
-		letterList.addNode(newNode);
-	}
-	public void print() {
-		letterList.print(letterList.getRoot());
+	public void addNode(Letter newNode) {
+		letterList.add(newNode);
 	}
 }

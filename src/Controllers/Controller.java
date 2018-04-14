@@ -2,7 +2,9 @@ package Controllers;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashSet;
 
+import models.entities.Letter;
 import models.entities.LetterMannager;
 import views.MainWindow;
 
@@ -14,10 +16,10 @@ public class Controller implements ActionListener{
 	public Controller() {
 		letterMannager = new LetterMannager();
 		mainWindow = new MainWindow(this);
-//		Node<Letter> father = new Node<Letter>(new Letter("a"), null);
-//		letterMannager.addNode(father);
-//		letterMannager.addNode(new Node<Letter>(new Letter("b"), father));
-//		letterMannager.print();
+		Letter a = new Letter("a");
+		letterMannager.addNode(a);
+		letterMannager.addSon(new Letter("c"), a);
+//		mainWindow.fullBox(fullHash(a.getLetter()));
 		mainWindow.setVisible(true);
 	}
 
@@ -33,7 +35,7 @@ public class Controller implements ActionListener{
 	}
 
 	private void fullTree() {
-		// TODO Auto-generated method stub
 		
 	}
+	
 }

@@ -3,12 +3,12 @@ package struct;
 public class Node <T>{
 
 	private Node<T> next;
-	private Node<T> left;
 	private T information;
 	private MyList<Node<T>> listNodes;
 	
 	public Node(T info) {
 		this.information = info;
+		listNodes = new MyList<>();
 	}
 	
 	
@@ -24,13 +24,6 @@ public class Node <T>{
 		this.next = next;
 	}
 	
-	public void setAnt(Node<T> ant) {
-		this.left = ant;
-	}
-	
-	public Node<T> getAnt() {
-		return left;
-	}
 	
 	@Override
 	public String toString() {
